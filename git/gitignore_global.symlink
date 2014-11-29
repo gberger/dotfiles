@@ -1,0 +1,11 @@
+.DS_Store
+*~
+*.swp
+.idea/
+.Rhistory
+Thumbs.db
+.log
+.sql
+.sass-cache/
+.codekit-config.json
+*.pyc

@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+class String
+  # colorization
+  def colorize(color_code)
+    "\e[#{color_code}m#{self}\e[0m"
+  end
+
+  def red
+    colorize(31)
+  end
+
+  def green
+    colorize(32)
+  end
+
+  def yellow
+    colorize(33)
+  end
+
+  def pink
+    colorize(35)
+  end
+end
+
+file_name = "#{Dir.home}/.gitconfig"
+file_contents = File.open(file_name).read
+
+aliases_section = file_contents[/### START ALIAS\n(.*)### END ALIAS/m, 1]
+
+aliases_section.lines.each do |l|
+  name, value = l.split('=')
+  next unless name && value
+  print "#{name.red} = #{value.green}"
+end

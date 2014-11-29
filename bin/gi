@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl http://www.gitignore.io/api/$@ ;

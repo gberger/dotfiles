@@ -1,0 +1,61 @@
+[user]
+  name = Guilherme Berger
+  email = guilherme.berger@gmail.com
+[core]
+  editor = vim -c 'startinsert'
+        excludesfile = ~/.gitignore_global
+  autocrlf = input
+[color]
+  ui = true
+[alias]
+  # What's going on?
+  st     = status
+  l      = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(yellow)%h%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset) %C(bold yellow)%d%C(reset) %C(green)%ar%C(reset)'
+  fl     = log -u
+  b      = branch
+  di     = diff
+  dw     = diff --color-words
+  dc     = diff --cached
+  dh1    = diff HEAD~1
+  wtf    = !git-wtf
+
+
+  # I did something
+  ap     = add --all -p
+  aa     = !git add --all && git status
+  ac     = !git add --all && git commit
+  ci     = commit
+  cm     = commit -m
+  wip    = !git add . --all && git commit -m "WIP"
+
+  po     = push origin --follow-tags
+  pom    = push origin master --follow-tags
+  poh    = !git push origin master --follow-tags && git push heroku master
+
+
+  # I fucked up
+  amd    = commit --amend
+  amend  = commit --amend
+  ammend = commit --amend
+  undo   = reset --soft HEAD^
+  rhr    = reset HEAD --hard
+  nuke   = !git-nuke
+
+
+  # Branches, remotes and stuff
+  co     = checkout
+  ff     = merge --ff-only
+  pullff = pull --ff-only
+  noff   = merge --no-ff
+  fa     = fetch --all
+
+
+  # Utilities  
+  alias  = !git-alias
+  run    = !run-command-on-git-revisions
+  
+[push]
+  default = current
+[heroku]
+  account = personal
+
