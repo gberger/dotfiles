@@ -34,7 +34,7 @@ is_git() {
 }
 
 is_home() {
-	[ `pwd` = $HOME ]
+	[ "$(pwd)" = $HOME ]
 }
 
 dir_info() {
@@ -45,7 +45,7 @@ dir_info() {
 	then
 		echo -n "$(basename $(git rev-parse --show-toplevel))/$(git rev-parse --show-prefix)" | sed 's/\/$//' 
 	else
-		echo -n $(basename $(pwd))
+		echo -n $(basename "$(pwd)")
 	fi
 }
 
