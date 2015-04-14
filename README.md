@@ -77,6 +77,7 @@ Yo Gui, you should also install these:
 * [Flux](https://justgetflux.com/)
 * [GIMP](http://www.gimp.org/downloads/)
 * [iTerm 2](http://iterm2.com/downloads.html))
+* [Messenger.app](http://fbmacmessenger.rsms.me/)
 * [Postgres.app](http://postgresapp.com/)
 * [Pushbullet](https://www.pushbullet.com/apps)
 * [RubyMine](https://www.jetbrains.com/ruby/download/)
