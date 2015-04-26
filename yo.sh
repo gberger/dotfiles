@@ -148,6 +148,9 @@ brew_install_or_upgrade 'ngrok'
 brew_install_or_upgrade 'hub'
 brew_install_or_upgrade 'node'
 
+brew_tap 'dart-lang/dart'
+brew_install_or_upgrade 'dart'
+
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'
 
