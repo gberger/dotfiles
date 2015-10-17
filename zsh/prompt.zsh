@@ -12,7 +12,7 @@ else
 fi
 
 git_branch() {
-  echo $($git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+  echo $($git symbolic-ref HEAD 2>/dev/null | sed -e s/refs\\\/heads\\\///)
 }
 
 git_dirty() {
@@ -43,7 +43,7 @@ dir_info() {
 		echo -n "~" 
 	elif is_git
 	then
-		echo -n "$(basename $(git rev-parse --show-toplevel))/$(git rev-parse --show-prefix)" | sed 's/\/$//' 
+		echo -n "$(basename "$(git rev-parse --show-toplevel)")/$(git rev-parse --show-prefix)" | sed 's/\/$//' 
 	else
 		echo -n $(basename "$(pwd)")
 	fi
