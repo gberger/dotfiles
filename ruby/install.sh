@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ../fns.sh
+source $(dirname $0)/../fns.sh
 
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'

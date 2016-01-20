@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for i in $@
+do
+    $DOTFILES_ROOT/$i/install.sh
+done
