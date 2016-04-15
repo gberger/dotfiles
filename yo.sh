@@ -48,9 +48,8 @@ fi
 fancy_echo "Updating Homebrew formulas ..."
 brew update
 
-brew_install_or_upgrade 'ngrok'
-brew_install_or_upgrade 'openssl'
-brew unlink openssl && brew link openssl --force
+# brew_install_or_upgrade 'openssl'
+# brew unlink openssl && brew link openssl --force
 
 
 
@@ -84,4 +83,4 @@ install_dotfiles
 echo ""
 fancy_echo "you can now run these to install other stuff:"
 
-find "$DOTFILES_ROOT" -maxdepth 2 -name 'install.sh'
+find "$(pwd)" -maxdepth 2 -name 'install.sh'

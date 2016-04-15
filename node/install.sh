@@ -2,5 +2,8 @@
 
 source $(dirname $0)/../fns.sh
 
-brew_tap homebrew/versions
-brew_install_or_upgrade homebrew/versions/node012
+git clone https://github.com/creationix/nvm.git ~/.nvm
+cd ~/.nvm
+git checkout `git describe --abbrev=0 --tags`
+
+. ~/.nvm/nvm.sh
